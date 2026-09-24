@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary: #fff;
+    --secondary: #000;
+
+    --muted-100: #ececec;
+    --muted-200: #d1d5dc;
+    --muted-300: #99a1af;
+    --muted-400: #6a7282;
+    --muted-500: #4b525e;
+    --muted-600: #4a5565;
+    --muted-700: #364153;
+    --muted-800: #1e2939;
+    --muted-900: #101828;
+
+    --focus-outline: #000;
+    --focus-outline-contrast: #fff;
+    --focus-outline-width: 2px;
+    --focus-outline-offset: 2px;
+}
+
+@theme {
+    --color-primary: var(--primary);
+    --color-secondary: var(--secondary);
+
+    --color-muted-100: var(--muted-100);
+    --color-muted-200: var(--muted-200);
+    --color-muted-300: var(--muted-300);
+    --color-muted-400: var(--muted-400);
+    --color-muted-500: var(--muted-500);
+    --color-muted-600: var(--muted-600);
+    --color-muted-700: var(--muted-700);
+    --color-muted-800: var(--muted-800);
+    --color-muted-900: var(--muted-900);
+
+    --color-focus-outline: var(--focus-outline);
+    --color-focus-outline-contrast: var(--focus-outline-contrast);
+    --color-focus-outline-width: var(--focus-outline-width);
+    --color-focus-outline-offset: var(--focus-outline-offset);
+}
