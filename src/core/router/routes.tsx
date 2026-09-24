@@ -5,6 +5,8 @@ import {
     LandingPage
 } from "./lazyComponents";
 
+// ========== ROUTES =====================
+
 export const routes: RouteObject[] = [
   {
     path: "/",
