@@ -1,7 +1,7 @@
 body,
 html {
     margin: 0;
-    background-color: var(--color-background-dark);
+    background-color: var(--color-background);
 
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
