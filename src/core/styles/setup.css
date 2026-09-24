@@ -4,6 +4,8 @@
     --primary: #fff;
     --secondary: #000;
 
+    --background: #000;
+
     --muted-100: #ececec;
     --muted-200: #d1d5dc;
     --muted-300: #99a1af;
@@ -23,6 +25,8 @@
 @theme {
     --color-primary: var(--primary);
     --color-secondary: var(--secondary);
+
+    --color-background: var(--background);
 
     --color-muted-100: var(--muted-100);
     --color-muted-200: var(--muted-200);

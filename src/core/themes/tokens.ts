@@ -4,6 +4,8 @@ export const tokenSchema = [
     "primary",
     "secondary",
 
+    "background",
+
     "muted-100",
     "muted-200",
     "muted-300",

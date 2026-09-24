@@ -8,6 +8,8 @@ export const themes = {
             primary: "#181818",
             secondary: "#fff",
 
+            background: "#181818",
+
             "muted-100": "#323232",
             "muted-200": "#3d3d3d",
             "muted-300": "#4f4f4f",
@@ -29,6 +31,8 @@ export const themes = {
         schema: {
             primary: "#fff",
             secondary: "#181818",
+
+            background: "#fff",
 
             "muted-900": "#f5f5f5",
             "muted-800": "#e0e0e0",
