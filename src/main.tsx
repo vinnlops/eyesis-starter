@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom'
 
-import "./core/styles"
+import './core/styles'
 import { router } from './core/router'
 
 createRoot(document.getElementById('root')!).render(
