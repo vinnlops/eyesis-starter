@@ -15,8 +15,9 @@ export function ThemesSection() {
         </h2>
       </div>
       <div className="flex flex-row gap-3">
-        {getThemeFamilies(useIsDarkTheme()).map((theme) => (
+        {getThemeFamilies(useIsDarkTheme()).map((theme, index) => (
           <Button
+            key={`${index}-${theme}`}
             rounded={"full"}
             textVariant={"background"}
             className="shadow-box-1"
