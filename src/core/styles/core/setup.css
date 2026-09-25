@@ -20,6 +20,14 @@
     --focus-outline-contrast: #fff;
     --focus-outline-width: 2px;
     --focus-outline-offset: 2px;
+
+    --transition-fast: 150ms;
+    --transition-normal: 250ms;
+    --transition-slow: 450ms;
+
+    --ease-smooth: cubic-bezier(0.42, 0, 0.58, 1);
+    --ease-responsive: cubic-bezier(0.12, 0.57, 0.51, 1);
+    --ease-emphasized: cubic-bezier(0.51, 0, 0.28, 1);
 }
 
 @theme {

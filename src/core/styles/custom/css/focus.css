@@ -1,0 +1,34 @@
+:root :where(a[href],
+    button,
+    input:not([type="hidden"]),
+    select,
+    textarea,
+    summary,
+    [role="button"],
+    [role="link"],
+    [role="menuitem"],
+    [role="option"],
+    [role="tab"],
+    [tabindex]:not([tabindex="-1"]),
+    [contenteditable="true"]):focus,
+.focus-outline:focus {
+    outline: none;
+}
+
+:root[data-input-modality="keyboard"] :where(a[href],
+    button,
+    input:not([type="hidden"]),
+    select,
+    textarea,
+    summary,
+    [role="button"],
+    [role="link"],
+    [role="menuitem"],
+    [role="option"],
+    [role="tab"],
+    [tabindex]:not([tabindex="-1"]),
+    [contenteditable="true"]):focus,
+:root[data-input-modality="keyboard"] .focus-outline:focus {
+    outline: var(--focus-outline-width) solid var(--color-focus-outline);
+    outline-offset: var(--focus-outline-offset);
+}

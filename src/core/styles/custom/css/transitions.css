@@ -1,0 +1,23 @@
+.transition-fast {
+    transition-duration: var(--transition-fast);
+}
+
+.transition-fast {
+    transition-duration: var(--transition-normal);
+}
+
+.transition-slow {
+    transition-duration: var(--transition-slow);
+}
+
+.ease-smooth {
+    transition-timing-function: var(--ease-smooth);
+}
+
+.ease-responsive {
+    transition-timing-function: var(--ease-responsive);
+}
+
+.ease-emphasized {
+    transition-timing-function: var(--ease-emphasized);
+}

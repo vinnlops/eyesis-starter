@@ -6,6 +6,10 @@ html {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+
+    transition-property: "background color";
+    transition-timing-function: var(--ease-responsive);
+    transition-duration: var(--transition-slow);
 }
 
 #root {
