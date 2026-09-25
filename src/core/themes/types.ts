@@ -9,9 +9,10 @@ export type ThemeTokens = Record<TokenKey, string>;
 // ==================== THEMES =======================
 
 export type ThemeFamily =
-    | "default"
-    | "blue"
-    | "steel"
+    | "graphite"
+    | "sky"
+    | "forest"
+    | "magma"
 
 export type ThemeConfig = {
     family: ThemeFamily;

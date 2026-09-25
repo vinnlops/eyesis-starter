@@ -53,6 +53,11 @@ export function getTheme(): ThemeName {
 
 // Retorna o tema atual
 export function useTheme() {
+    return useThemeStore((state) => themes[state.theme])
+}
+
+// Retorna o nome/key do tema atual
+export function useThemeName() {
     return useThemeStore((state) => state.theme)
 }
 
@@ -71,13 +76,17 @@ export function changeTheme(theme: ThemeName): void {
     useThemeStore.getState().setTheme(theme);
 }
 
+export function nextTheme(): void {
+    useThemeStore.getState().nextTheme();
+}
+
+export function nextThemeFamily(): void {
+    useThemeStore.getState().nextThemeFamily();
+}
+
 // Obtem familia de themas de acordo com o estado atual (escuro/claro)
-export function getThemeFamilies(isDark: boolean) {
+export function getThemeFamilies(isDark: boolean): ThemeName[] {
     return themeNames
         .filter((name) => themes[name].isDark === isDark)
-        .map((name) => ({
-            name,
-            family: themes[name].family,
-            theme: themes[name],
-        }))
+        .map((name) => (name))
 }

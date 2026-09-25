@@ -6,5 +6,9 @@ export type ThemeStore = {
 
     setTheme: (theme: ThemeName) => void;
     setThemeFamily: (Family: ThemeFamily) => void;
+
+    nextTheme: () => void;
+    nextThemeFamily: () => void;
+
     toggleTheme: () => void;
 };

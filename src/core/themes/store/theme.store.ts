@@ -6,6 +6,7 @@ import type { ThemeStore } from "./theme.types";
 import { defaultTheme, resolveTheme } from "../theme.runtime";
 import { applyTheme } from "../theme.runtime";
 import { themeNames, themes } from "../presets";
+import { getThemeFamilies, useIsDarkTheme, useThemeName } from "../useTheme";
 
 function readPersistedTheme(value: unknown): unknown {
     const isValid =
@@ -50,6 +51,44 @@ export const useThemeStore = create<ThemeStore>()(
                 if (nextTheme) {
                     get().setTheme(nextTheme);
                 }
+            },
+
+            nextTheme() {
+                if (!themeNames.length) return;
+
+                const currentIndex = themeNames.findIndex((theme) => theme === get().theme)
+
+                const nextIndex =
+                    currentIndex === -1
+                        ? 0
+                        : (currentIndex + 1) % themeNames.length;
+
+                console.log("indice: " + currentIndex + " Proximo indice: " + nextIndex)
+
+                get().setTheme(themeNames[nextIndex]);
+            },
+
+            nextThemeFamily() {
+                const themeFamilies = themeNames
+                    .filter((name) => themes[name].isDark === themes[get().theme].isDark)
+                    .map((name) => ({
+                        name,
+                        family: themes[name].family,
+                        theme: themes[name],
+                    }));
+
+                if (!themeFamilies.length) return;
+
+                const currentIndex = themeFamilies.findIndex(
+                    (theme) => theme.name === get().theme
+                );
+
+                const nextIndex =
+                    currentIndex === -1
+                        ? 0
+                        : (currentIndex + 1) % themeFamilies.length;
+
+                get().setTheme(themeFamilies[nextIndex].name);
             },
 
             // Alterna entre claro e escuro mantendo familia
