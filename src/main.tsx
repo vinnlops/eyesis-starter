@@ -1,15 +1,18 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { RouterProvider } from 'react-router-dom'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { RouterProvider } from "react-router-dom";
 
-import './core/styles'
-import { router } from './core/router'
-import { initTheme } from './core/themes'
+import "./core/styles";
+import { router } from "./core/router";
+import { initTheme } from "./core/themes";
+import ReactLenis from "lenis/react";
 
-initTheme()
+initTheme();
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <ReactLenis root>
+      <RouterProvider router={router} />
+    </ReactLenis>
   </StrictMode>,
-)
+);
