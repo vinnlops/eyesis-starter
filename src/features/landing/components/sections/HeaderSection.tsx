@@ -14,7 +14,6 @@ export function HeaderSection() {
       </div>
       <div className="flex flex-row gap-3 justify-center">
         <Button
-          rounded={"full"}
           textVariant={"muted-900"}
           className="shadow-box-1"
           bgVariant={"ghost"}
@@ -23,7 +22,6 @@ export function HeaderSection() {
           Alternar
         </Button>
         <Button
-          rounded={"full"}
           textVariant={"background"}
           className="shadow-box-1"
           bgVariant={"secondary"}

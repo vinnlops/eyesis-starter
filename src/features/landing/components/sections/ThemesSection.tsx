@@ -18,7 +18,6 @@ export function ThemesSection() {
         {getThemeFamilies(useIsDarkTheme()).map((theme, index) => (
           <Button
             key={`${index}-${theme}`}
-            rounded={"full"}
             textVariant={"background"}
             className="shadow-box-1"
             style={{
