@@ -1,6 +1,6 @@
 export const buttonStyles = {
   base: "inline-flex items-center justify-center gap-2 font-medium enabled:cursor-pointer",
-  transition: "transition-all transition-normal ease-responsive will-change-transform",
+  transition: "transition-all transition-normal ease-responsive will-change-all",
   fullWidth: "w-full",
   spinner: "size-3.5 shrink-0 animate-spin rounded-full border-2 border-current border-r-transparent motion-reduce:animate-none",
 } as const;
@@ -10,7 +10,7 @@ export const bgVariants = {
   secondary: "bg-secondary enabled:hover:bg-secondary-90 enabled:active:secondary/80",
   ghost: "bg-transparent enabled:hover:bg-muted-100 enabled:active:bg-muted-200/70",
   danger: "bg-red-500 enabled:hover:bg-red-500/90 enabled:active:bg-red-600",
-  outline: "border border-muted-200 bg-transparent enabled:hover:bg-muted-100 enabled:active:bg-muted-200/70",
+  outline: "border-2 border-muted-900 bg-transparent enabled:hover:bg-muted-100 enabled:active:bg-muted-200/70",
   plain: "",
 } as const;
 
@@ -50,10 +50,10 @@ export type RoundedVariants = keyof typeof roundeds;
 
 export const defaultTextVariants = {
   primary: "muted-100",
-  secondary: "muted-900",
-  ghost: "muted-500",
+  secondary: "muted-100",
+  ghost: "muted-900",
   danger: "white",
-  outline: "muted-700",
+  outline: "muted-900",
   plain: "plain",
 } as const satisfies Record<ButtonBGVariant, ButtonTextVariant>;
 
