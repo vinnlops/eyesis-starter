@@ -1,0 +1,24 @@
+import type { PlopGeneratorConfig } from "plop";
+
+// ========== TYPES =================================
+
+export type Prompts = PlopGeneratorConfig['prompts'];
+export type Actions = PlopGeneratorConfig['actions'];
+
+// ========== CONFIG ================================
+
+export const prompts: Prompts = [
+    {
+        type: "input",
+        name: "name",
+        message: "{{promptMessage}}"
+    }
+];
+
+export const actions: Actions = [
+    {
+        type: "add",
+        path: "{{camelCase baseUrl}}/\{{pascalCase name}}/index.tsx",
+        templateFile: "./tools/plop/generators/{{camelCase name}}/templates/{{camelCase name}}.hbs"
+    }
+]

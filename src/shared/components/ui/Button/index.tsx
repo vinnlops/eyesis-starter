@@ -14,14 +14,14 @@ import {
   type ButtonSize,
   type ButtonTextVariant,
   type RoundedVariants,
-} from "./button.styles";
+} from "./index.styles";
 
 export type {
   ButtonBGVariant,
   ButtonSize,
   ButtonTextVariant,
   RoundedVariants,
-} from "./button.styles";
+} from "./index.styles";
 
 export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   bgVariant?: ButtonBGVariant | false;

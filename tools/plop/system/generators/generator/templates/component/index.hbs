@@ -1,0 +1,11 @@
+import type { NodePlopAPI } from "plop";
+import { actions, prompts } from "./config.ts";
+
+export function register{{pascalCase name}}Generator(plop: NodePlopAPI) {
+    return plop.setGenerator("{{kebabCase name}}", {
+        description: "{{description}}",
+
+        prompts: prompts,
+        actions: actions
+    })
+}

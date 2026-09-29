@@ -1,0 +1,14 @@
+import type { ThemeConfig } from "../../types";
+
+/* ==================== {{upperCase themeFamily}} {{upperCase themeMode}} ==================== */
+
+export const {{themeFamily}}{{pascalCase themeMode}}: ThemeConfig = {
+    family: "{{lowerCase themeFamily}}",
+    isDark: {{#if (eq themeMode "dark")}}true{{else}}false{{/if}},
+    schema: {
+        {{#each schema}}
+        "{{token}}": "{{hex}}"{{#unless @last}},{{/unless}}{{#if (isLastOfSection ../schema @index)}}{{#unless @last}}
+        {{/unless}}{{/if}}
+        {{/each}}
+    },
+};
