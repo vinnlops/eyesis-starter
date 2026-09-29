@@ -6,7 +6,6 @@ import type { ThemeStore } from "./theme.types";
 import { defaultTheme, resolveTheme } from "../theme.runtime";
 import { applyTheme } from "../theme.runtime";
 import { themeNames, themes } from "../presets";
-import { getThemeFamilies, useIsDarkTheme, useThemeName } from "../useTheme";
 
 function readPersistedTheme(value: unknown): unknown {
     const isValid =
