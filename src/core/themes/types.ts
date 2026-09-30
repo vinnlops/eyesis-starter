@@ -22,13 +22,14 @@ export type ThemeMode =
     | "dark"
 
 export type ThemeFamily =
-    | "graphite"
-    | "sky"
-    | "forest"
-    | "magma"
+    // <plop:families>
+| "graphite"
+| "sky"
+| "forest"
+| "magma"
 
 export type ThemeConfig = {
-    family: ThemeFamily;
-    schema: ThemeTokens;
-    isDark: boolean;
+family: ThemeFamily;
+schema: ThemeTokens;
+isDark: boolean;
 }

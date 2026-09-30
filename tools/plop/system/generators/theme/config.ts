@@ -142,10 +142,10 @@ export const createThemeActions: Actions = (answers?: Record<string, any>) => {
     if (!answers)
         return [];
 
-    if(!answers.name || answers.name.trim() === "")
+    if (!answers.name || answers.name.trim() === "")
         return [`${kleur.red("Erro")}: tema deve ter um nome válido`]
 
-    return themeModes.map((themeMode) => ({
+    return [...themeModes.map((themeMode) => ({
         type: "add",
         path: `src/core/themes/presets/{{kebabCase name}}/${themeMode}.ts`,
         templateFile: "./tools/plop/system/generators/theme/templates/theme.hbs",
@@ -154,5 +154,12 @@ export const createThemeActions: Actions = (answers?: Record<string, any>) => {
             themeMode,
             schema: createSchema(answers, themeMode),
         }
-    }))
+    })),
+    {
+        type: "append",
+        path: "src/core/themes/types.ts",
+        pattern: "<plop:families>",
+        template: `| "${answers.name}"`
+    }
+    ]
 }
