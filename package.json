@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "plop": "plop",
     "generate:component": "plop component",
     "generate:generator": "plop generator"
   },
